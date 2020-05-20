@@ -1,0 +1,22 @@
+{
+	"groups":[
+    {
+        "employee": [
+        ],
+        "group_name": "group1",
+        "group_persent": ""
+    },
+    {
+        "employee": [
+        ],
+        "group_name": "group3",
+        "group_persent": ""
+    },
+    {
+        "employee": [
+        ],
+        "group_name": "group2",
+        "group_persent": ""
+    }
+]
+}

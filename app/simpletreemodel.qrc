@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>default.txt</file>
+        <file>fonts/Akrobat-Bold.ttf</file>
+        <file>fonts/Akrobat-Regular.ttf</file>
+        <file>fonts/MODERNE_SANS.ttf</file>
+        <file>fonts/Akrobat-Black.ttf</file>
+        <file>fonts/Akrobat-ExtraBold.ttf</file>
+        <file>fonts/Akrobat-ExtraLight.ttf</file>
+        <file>fonts/Akrobat-Light.ttf</file>
+        <file>fonts/Akrobat-SemiBold.ttf</file>
+        <file>fonts/Akrobat-Thin.ttf</file>
+        <file>fonts/SourceSansPro-Black.ttf</file>
+        <file>fonts/SourceSansPro-Bold.ttf</file>
+        <file>fonts/SourceSansPro-SemiBold.ttf</file>
+        <file>Branches/branch-closed.png</file>
+        <file>Branches/branch-end.png</file>
+        <file>Branches/branch-more.png</file>
+        <file>Branches/branch-open.png</file>
+        <file>Branches/vline.png</file>
+    </qresource>
+</RCC>
