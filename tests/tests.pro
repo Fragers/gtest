@@ -15,11 +15,13 @@ LIBS += -lgcov
 DEFINES += INPUTDIR=\\\"$$PWD/input/\\\" \
            SAVEDIR=\\\"$$PWD/TEST_SAVE/\\\" \
            OTHERDIR=\\\"$$PWD/OTHER_TESTS/\\\" \
-           INDIR=\\\"$$PWD/inp/\\\"
+           INDIR=\\\"$$PWD/inp/\\\" \
+           DELETEDIR=\\\"$$PWD/deleteRow/\\\"
 
 HEADERS += second_test.h \
     other_tests.h \
     simple_test.h \
+    test_deleteRow.h \
     test_insertChild.h \
     test_save.h
 
