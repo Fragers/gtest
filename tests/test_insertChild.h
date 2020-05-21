@@ -38,7 +38,7 @@ TEST(insertChild, firstGroupSelected){
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
     int argc;
-    char* argv[0];
+    char* argv[1];
     QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
@@ -66,8 +66,8 @@ TEST(insertChild, firstGroupSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-    w.close();
-        a.exit(0);
+//    w.close();
+//        a.exit(0);
 }
 
 
@@ -75,7 +75,7 @@ TEST(insertChild, firstGroup_firstEmployeeSelected){
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
     int argc;
-    char* argv[0];
+    char* argv[1];
     QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
@@ -103,15 +103,15 @@ TEST(insertChild, firstGroup_firstEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-    w.close();
-        a.exit(0);
+//    w.close();
+//        a.exit(0);
 }
 
 TEST(insertChild, firstGroup_secondEmployeeSelected){
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
     int argc;
-    char* argv[0];
+    char* argv[1];
     QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
@@ -139,8 +139,8 @@ TEST(insertChild, firstGroup_secondEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-    w.close();
-       a.exit(0);
+//    w.close();
+//       a.exit(0);
 }
 
 
