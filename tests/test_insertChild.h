@@ -66,9 +66,9 @@ TEST(insertChild, firstGroupSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//    a.exit(0);
-//    w.model1->~TreeModel();
+    w.close();
+    a.exit(0);
+    w.model1->~TreeModel();
 //    delete root;
 //    delete first;
 //    delete empNew;
@@ -108,10 +108,10 @@ TEST(insertChild, firstGroup_firstEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//        a.exit(0);
+    w.close();
+        a.exit(0);
 
-//    w.model1->~TreeModel();
+    w.model1->~TreeModel();
 //    delete root;
 //    delete first;
 //    delete empNew;
@@ -150,8 +150,8 @@ TEST(insertChild, firstGroup_secondEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//       a.exit(0);
+    w.close();
+       a.exit(0);
     w.model1->~TreeModel();
 //    delete root;
 //    delete first;
