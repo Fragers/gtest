@@ -44,24 +44,6 @@
     },
     {
         "employee": [
-        ],
-        "group_name": "group6",
-        "group_persent": ""
-    },
-    {
-        "employee": [
-        ],
-        "group_name": "group5",
-        "group_persent": ""
-    },
-    {
-        "employee": [
-        ],
-        "group_name": "group4",
-        "group_persent": ""
-    },
-    {
-        "employee": [
             {
                 "name": "employee2",
                 "persents": "100%",

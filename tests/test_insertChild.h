@@ -106,6 +106,7 @@ TEST(insertChild, firstGroup_firstEmployeeSelected){
     w.close();
         a.exit(0);
 }
+
 TEST(insertChild, firstGroup_secondEmployeeSelected){
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
@@ -141,4 +142,6 @@ TEST(insertChild, firstGroup_secondEmployeeSelected){
     w.close();
        a.exit(0);
 }
+
+
 #endif // TEST_INSERTCHILD_H

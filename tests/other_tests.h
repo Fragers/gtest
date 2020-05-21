@@ -137,5 +137,54 @@ TEST(testOther, emptyFile){
     a.exit(0);
 }
 
+TEST(testOther, insertChildToTask){
+
+    std::string inpDir = (const char*)INDIR;
+    QString se = QString::fromStdString(inpDir);
+    int argc;
+    char* argv[0];
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.file1.setFileName((inpDir+"show.json").c_str());
+
+    w.flagGetFile = 1;
+    w.initModel();
+
+    TreeItem* root = w.model1->getRoot();
+    TreeItem* first = root->child(0)->child(0)->child(0);
+    QModelIndex ind = w.model1->getIn(0, 0, first);
+
+    w.ui->treeView->selectionModel()->setCurrentIndex(ind, QItemSelectionModel::Select);
+    w.ui->treeView->closePersistentEditor(w.ui->treeView->selectionModel()->currentIndex());
+    w.ui->treeView->selectionModel()->setCurrentIndex(ind, QItemSelectionModel::Select);
+    w.ui->treeView->closePersistentEditor(w.ui->treeView->selectionModel()->currentIndex());
+    std::string path = (const char*)OTHERDIR;
+    w.insertChild();
+
+      w.file1.setFileName((path+"otherTest.json").c_str());
+    w.saveClicked();
+
+    QFile getFile;
+    getFile.setFileName((path+"otherTest.json").c_str());
+    getFile.open(QIODevice::ReadOnly);
+    QByteArray getFileAr = getFile.readAll();
+    std::string getS = getFileAr.toStdString();
+    getFile.close();
+
+    QFile haveFile;
+    haveFile.setFileName((inpDir+"show.json").c_str());
+    haveFile.open(QIODevice::ReadOnly);
+    QByteArray haveFileAr = haveFile.readAll();
+    std::string haveS = haveFileAr.toStdString();
+    haveFile.close();
+
+
+    if(getS != haveS)
+        FAIL();
+
+    w.isSaved = true;
+    w.close();
+    a.exit(0);
+}
 
 #endif // OTHER_TESTS_H
