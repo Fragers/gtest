@@ -1,5 +1,6 @@
 language: cpp
-dist: bionic
+services:
+  - xvfb
 compiler: gcc
 
 before_install:
@@ -14,7 +15,7 @@ addons:
 
 script:
   - qmake
-  - make
+  - xvfb-run make test
   - ./tests/tests
 
 after_success:
