@@ -25,10 +25,6 @@ HEADERS += second_test.h \
     test_insertChild.h \
     test_save.h
 
-
-SOURCES +=     main.cpp \
-    ../app/myfunc.c
-
 INCLUDEPATH += ../app
 
 DISTFILES += \
@@ -39,28 +35,32 @@ QT += network #charts
 
 SOURCES += \
 #    ../app/chart.cpp \
-    #../app/main.cpp \
+#    ../app/main.cpp \
     ../app/mainwindow.cpp \
     #myserver.cpp \
     ../app/treeitem.cpp \
-    ../app/treemodel.cpp
+    ../app/treemodel.cpp \
     #widget.cpp
-
+    ../app/createnewfile.cpp \
+#        ../app/donutbreakdownchart.cpp \
+    ../app/httpserver.cpp \
+    ../app/initstart.cpp \
+#        ../app/mainslice.cpp \
+    ../app/savedia.cpp \
+     main.cpp
     HEADERS += \
         ../app/createnewfile.h \
 #        ../app/donutbreakdownchart.h \
         ../app/httpserver.h \
         ../app/initstart.h \
 #        ../app/mainslice.h \
-        ../app/savedia.h
-
-    SOURCES += \
-        ../app/createnewfile.cpp \
-#        ../app/donutbreakdownchart.cpp \
-        ../app/httpserver.cpp \
-        ../app/initstart.cpp \
-#        ../app/mainslice.cpp \
-        ../app/savedia.cpp
+        ../app/savedia.h \
+        #        ../app/chart.h \
+                ../app/mainwindow.h \
+                #myserver.h \
+                ../app/treeitem.h \
+                ../app/treemodel.h
+              #  widget.h
 
     greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -77,13 +77,6 @@ SOURCES += \
     #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-    HEADERS += \
-#        ../app/chart.h \
-        ../app/mainwindow.h \
-        #myserver.h \
-        ../app/treeitem.h \
-        ../app/treemodel.h
-      #  widget.h
 
     FORMS += \
 #        ../app/chart.ui \

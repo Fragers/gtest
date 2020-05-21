@@ -17,7 +17,7 @@
 #include"treemodel.h"
 #include<QTcpSocket>
 #include<QMessageBox>
-#include "chart.h"
+//#include "chart.h"
 #include"httpserver.h"
 namespace Ui {
 class MainWindow;
@@ -51,7 +51,7 @@ public:
 
     void initStartFunc();
     Ui::MainWindow *ui;
-    chart *window;
+//    chart *window;
     int hasData = 0;
     bool isSaved = false;
     void closeEvent(QCloseEvent *event);
@@ -65,22 +65,22 @@ private slots: //слоты для действий, выполняемых по
 public slots: //для реализации сигнала selectionChanged у QTreeView::selectionModel
     void updateActions(const QItemSelection &,const QItemSelection &);
     void updateActions2();
-    void sockReady();
-    void sockDisc();
+//    void sockReady();
+//    void sockDisc();
     void getFileHttp();
     void insertChild();
     bool insertColumn();
     void insertRow();
     bool removeColumn();
     void removeRow();
-    void showChart();
+//    void showChart();
     void openClicked();
     void saveClicked();
-    void loadTriggered();
+//    void loadTriggered();
 
-    void uploadTriggered();
+//    void uploadTriggered();
 
-    void connectTriggered();
+//    void connectTriggered();
 
     void exitApp();
 
