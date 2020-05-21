@@ -5,11 +5,12 @@ language:
   - cpp
 
 before_install:
-  - pip install --user cpp-coveralls
+- pip install —user cpp-coveralls
+- sudo apt-get install qtdeclarative5-dev qt5-default
 
 addons:
   sonarcloud:
-    organization: "seekerk-github"
+    organization: "fragers"
 
 script:
   - qmake
