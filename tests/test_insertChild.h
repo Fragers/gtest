@@ -7,31 +7,31 @@
 #include<fstream>
 #include<iostream>
 #include <chrono>
-extern "C++" {
+
     #include "mainwindow.h"
-    #include "chart.h"
+//    #include "chart.h"
     #include "createnewfile.h"
-    #include "donutbreakdownchart.h"
+//    #include "donutbreakdownchart.h"
     #include "httpserver.h"
     #include "initstart.h"
-    #include "mainslice.h"
+//    #include "mainslice.h"
     #include "savedia.h"
     #include "treeitem.h"
     #include "treemodel.h"
     #include "ui_mainwindow.h"
     #include<QtWidgets>
     #include <QAction>
-    #include"chart.h"
+//    #include"chart.h"
     #include <QtWidgets/QApplication>
     #include <QtWidgets/QMainWindow>
     #include <QtWidgets/QStatusBar>
-    #include <QtCharts/QChartView>
-    #include "donutbreakdownchart.h"
+//    #include <QtCharts/QChartView>
+//    #include "donutbreakdownchart.h"
     #include"savedia.h"
     #include"initstart.h"
     #include<QLayout>
     #include <string>
-}
+
 
 
 TEST(insertChild, firstGroupSelected){
