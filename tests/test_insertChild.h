@@ -66,8 +66,9 @@ TEST(insertChild, firstGroupSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//        a.exit(0);
+    w.close();
+    a.exit(0);
+    w.model1->~TreeModel();
 }
 
 
@@ -103,8 +104,10 @@ TEST(insertChild, firstGroup_firstEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//        a.exit(0);
+    w.close();
+        a.exit(0);
+
+    w.model1->~TreeModel();
 }
 
 TEST(insertChild, firstGroup_secondEmployeeSelected){
@@ -139,8 +142,9 @@ TEST(insertChild, firstGroup_secondEmployeeSelected){
     if(s != str)
         FAIL();
     w.isSaved = true;
-//    w.close();
-//       a.exit(0);
+    w.close();
+       a.exit(0);
+    w.model1->~TreeModel();
 }
 
 
