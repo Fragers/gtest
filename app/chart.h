@@ -2,7 +2,7 @@
 #define CHART_H
 
 #include <QDialog>
-#include <QChart>
+//#include <QChart>
 namespace Ui {
 class chart;
 }

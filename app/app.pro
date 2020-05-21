@@ -11,24 +11,24 @@ QMAKE_CFLAGS += -Wall -Wextra -Werror
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 QT       += core gui
-QT += network charts
+QT += network #charts
 
 
 HEADERS += \
     createnewfile.h \
-    donutbreakdownchart.h \
+#    donutbreakdownchart.h \
     first_test.h \
     httpserver.h \
     initstart.h \
-    mainslice.h \
+#    mainslice.h \
     savedia.h
 
 SOURCES += \
     createnewfile.cpp \
-    donutbreakdownchart.cpp \
+#    donutbreakdownchart.cpp \
     httpserver.cpp \
     initstart.cpp \
-    mainslice.cpp \
+#    mainslice.cpp \
     savedia.cpp
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -46,7 +46,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    chart.cpp \
+    #chart.cpp \
     #main.cpp \
     mainwindow.cpp \
     #myserver.cpp \
@@ -55,7 +55,7 @@ SOURCES += \
     #widget.cpp
 
 HEADERS += \
-    chart.h \
+#    chart.h \
     mainwindow.h \
     #myserver.h \
     treeitem.h \
@@ -63,7 +63,7 @@ HEADERS += \
   #  widget.h
 
 FORMS += \
-    chart.ui \
+#    chart.ui \
     createnewfile.ui \
     initstart.ui \
     mainwindow.ui \

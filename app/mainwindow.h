@@ -39,7 +39,7 @@ public:
     QLabel *curPath;
 
     /*Сервер*/
-    QTcpSocket* socket;
+//    QTcpSocket* socket;
     QByteArray Data;
     QJsonDocument testDoc;
     QJsonParseError testDocError;

@@ -35,10 +35,10 @@ DISTFILES += \
     input/TestSTDOut_output.txt
 
 QT       += core gui
-QT += network charts
+QT += network #charts
 
 SOURCES += \
-    ../app/chart.cpp \
+#    ../app/chart.cpp \
     #../app/main.cpp \
     ../app/mainwindow.cpp \
     #myserver.cpp \
@@ -48,18 +48,18 @@ SOURCES += \
 
     HEADERS += \
         ../app/createnewfile.h \
-        ../app/donutbreakdownchart.h \
+#        ../app/donutbreakdownchart.h \
         ../app/httpserver.h \
         ../app/initstart.h \
-        ../app/mainslice.h \
+#        ../app/mainslice.h \
         ../app/savedia.h
 
     SOURCES += \
         ../app/createnewfile.cpp \
-        ../app/donutbreakdownchart.cpp \
+#        ../app/donutbreakdownchart.cpp \
         ../app/httpserver.cpp \
         ../app/initstart.cpp \
-        ../app/mainslice.cpp \
+#        ../app/mainslice.cpp \
         ../app/savedia.cpp
 
     greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -78,7 +78,7 @@ SOURCES += \
 
 
     HEADERS += \
-        ../app/chart.h \
+#        ../app/chart.h \
         ../app/mainwindow.h \
         #myserver.h \
         ../app/treeitem.h \
@@ -86,7 +86,7 @@ SOURCES += \
       #  widget.h
 
     FORMS += \
-        ../app/chart.ui \
+#        ../app/chart.ui \
         ../app/createnewfile.ui \
        ../app/initstart.ui \
         ../app/mainwindow.ui \

@@ -3,12 +3,12 @@
 #include "ui_mainwindow.h"
 #include<QtWidgets>
 #include <QAction>
-#include"chart.h"
+//#include"chart.h"
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QStatusBar>
-#include <QtCharts/QChartView>
-#include "donutbreakdownchart.h"
+//#include <QtCharts/QChartView>
+//#include "donutbreakdownchart.h"
 #include"savedia.h"
 #include"initstart.h"
 #include<QLayout>
@@ -18,13 +18,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
     /*Server*/
 
-    socket = new QTcpSocket(this);
-        connect(socket, SIGNAL(readyRead()), this, SLOT(sockReady()));
-        connect(socket, SIGNAL(disconnected()), this, SLOT(sockDisc()));
+//    socket = new QTcpSocket(this);
+//        connect(socket, SIGNAL(readyRead()), this, SLOT(sockReady()));
+//        connect(socket, SIGNAL(disconnected()), this, SLOT(sockDisc()));
 
-        connect(ui->actionLoad_file, SIGNAL(triggered()), this, SLOT(loadTriggered()));
-        connect(ui->actionUpload_file, SIGNAL(triggered()), this, SLOT(loadTriggered()));
-        connect(ui->actionConnect, SIGNAL(triggered()), this, SLOT(connectTriggered()));
+//        connect(ui->actionLoad_file, SIGNAL(triggered()), this, SLOT(loadTriggered()));
+//        connect(ui->actionUpload_file, SIGNAL(triggered()), this, SLOT(loadTriggered()));
+//        connect(ui->actionConnect, SIGNAL(triggered()), this, SLOT(connectTriggered()));
     httpServ = new httpServer();
         connect(httpServ, &httpServer::onReady, this, &MainWindow::getFileHttp);
         connect(ui->actionLoad_http_file, SIGNAL(triggered()), httpServ, SLOT(getData()));
@@ -62,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->removeRowAction,SIGNAL(clicked()),this,SLOT(removeRow()));
     connect(ui->insertChildAction, SIGNAL(clicked()),this,SLOT(insertChild()));
 
-    connect(ui->actionShow_chart, SIGNAL(triggered()), this, SLOT(showChart()));
+//    connect(ui->actionShow_chart, SIGNAL(triggered()), this, SLOT(showChart()));
 
 
     /*ShortCuts*/
@@ -198,26 +198,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::showChart(){
 
-    chartData.clear();
-    TreeItem* root = model1->getRoot();
-    int chCount = root->childCount();
-
-    for(int i = 0; i < chCount; i++){
-        TreeItem* cur =  root->child(i);
-        QString per = cur->data(2).toString();
-        QString grName = cur->data(0).toString();
-        per.resize(per.size()-1);
-        double dPer = per.toDouble();
-        chartData.push_back(qMakePair(grName, dPer));
-
-    }
-
-    window = new chart(this, chartData);
-    window->show();
-
-}
 
 void MainWindow::openClicked(){
 
@@ -531,71 +512,28 @@ void MainWindow::setNewGroup(){
        QItemSelectionModel::ClearAndSelect);
 }
 
+//void MainWindow::showChart(){
 
-void MainWindow::loadTriggered()
-{
-    if(socket->isOpen()){
-        socket->write("Read");
-        socket->waitForBytesWritten(2000);
-    }else{
-        QMessageBox::information(this, "Иноформация", "Соединение не установлено");
-    }
+//    chartData.clear();
+//    TreeItem* root = model1->getRoot();
+//    int chCount = root->childCount();
 
+//    for(int i = 0; i < chCount; i++){
+//        TreeItem* cur =  root->child(i);
+//        QString per = cur->data(2).toString();
+//        QString grName = cur->data(0).toString();
+//        per.resize(per.size()-1);
+//        double dPer = per.toDouble();
+//        chartData.push_back(qMakePair(grName, dPer));
 
-}
+//    }
 
+//    window = new chart(this, chartData);
+//    window->show();
 
+//}
 
-void MainWindow::connectTriggered()
-{
-
-    socket->connectToHost("127.0.0.1", 5555);
-}
-
-void MainWindow::sockDisc(){
-    socket->deleteLater();
-}
-
-void MainWindow::sockReady(){
-    if(socket->waitForConnected(500)){
-        socket->waitForReadyRead(500);
-        Data = socket->readAll();
-        testDoc = QJsonDocument::fromJson(Data, &testDocError);
-        if(testDocError.errorString().toInt() == QJsonParseError::NoError){
-            if(testDoc.object().value("type").toString() == "connect" && testDoc.object().value("status").toString() == "yes"){
-                QMessageBox::information(this, "информация", "соединение установлено");
-
-            }else{
-                flagGetFile = 1;
-                qDebug() << Data;
-                if(file1.open(QIODevice::WriteOnly|QIODevice::Text)){
-                    file1.write(testDoc.toJson());
-                }
-                file1.close();
-                initModel();
-
-            }
-        }else
-            QMessageBox::information(this, "информация", "соединение не установлено");
-        qDebug() << Data;
-    }
-}
-
-void MainWindow::uploadTriggered()
-{
-    if(socket->isOpen()){
-        socket->write("Write");
-        socket->waitForBytesWritten(1000);
-        socket->write(docToPush);
-    }else{
-        QMessageBox::information(this, "Иноформация", "Соединение не установлено");
-    }
-
-}
-
-//Сервер
-
-//void MainWindow::on_install_clicked()
+//void MainWindow::loadTriggered()
 //{
 //    if(socket->isOpen()){
 //        socket->write("Read");
@@ -609,7 +547,7 @@ void MainWindow::uploadTriggered()
 
 
 
-//void MainWindow::on_ConnectTo_clicked()
+//void MainWindow::connectTriggered()
 //{
 
 //    socket->connectToHost("127.0.0.1", 5555);
@@ -644,7 +582,7 @@ void MainWindow::uploadTriggered()
 //    }
 //}
 
-//void MainWindow::on_pushButton_clicked()
+//void MainWindow::uploadTriggered()
 //{
 //    if(socket->isOpen()){
 //        socket->write("Write");
@@ -656,4 +594,3 @@ void MainWindow::uploadTriggered()
 
 //}
 
-//todo кидаем запрос на чтение в формате

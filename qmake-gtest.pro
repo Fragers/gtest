@@ -8,4 +8,4 @@ QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -O0
 SUBDIRS = app tests
 
 CONFIG += ordered
-QT += core gui network charts
+QT += core gui network #charts
