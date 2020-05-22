@@ -48,18 +48,19 @@ SOURCES += \
 #        ../app/mainslice.cpp \
     ../app/savedia.cpp \
      main.cpp
-    HEADERS += \
-        ../app/createnewfile.h \
-#        ../app/donutbreakdownchart.h \
-        ../app/httpserver.h \
-        ../app/initstart.h \
-#        ../app/mainslice.h \
-        ../app/savedia.h \
-        #        ../app/chart.h \
-                ../app/mainwindow.h \
-                #myserver.h \
-                ../app/treeitem.h \
-                ../app/treemodel.h
+
+HEADERS += \
+    ../app/createnewfile.h \
+    #        ../app/donutbreakdownchart.h \
+    ../app/httpserver.h \
+    ../app/initstart.h \
+    #        ../app/mainslice.h \
+    ../app/savedia.h \
+            #        ../app/chart.h \
+    ../app/mainwindow.h \
+                    #myserver.h \
+    ../app/treeitem.h \
+    ../app/treemodel.h
               #  widget.h
 
     greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
