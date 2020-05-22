@@ -32,15 +32,18 @@
     #include<QLayout>
     #include <string>
 
+//int argc;
+//char* argv[1];
+//    QApplication a(argc, argv);
 
 
 TEST(testOther, tripleInsertRow){
 
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -83,7 +86,7 @@ TEST(testOther, tripleInsertRow){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 
 TEST(testOther, emptyFile){
@@ -91,9 +94,9 @@ TEST(testOther, emptyFile){
     std::string inpDir = (const char*)INDIR;
     std::string path = (const char*)OTHERDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((path+"emptyFile.json").c_str());
 
@@ -135,16 +138,16 @@ TEST(testOther, emptyFile){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 
 TEST(testOther, insertChildToTask){
 
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -185,7 +188,7 @@ TEST(testOther, insertChildToTask){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+   // a.exit(0);
 }
 
 #endif // OTHER_TESTS_H
