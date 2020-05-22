@@ -39,9 +39,9 @@
 TEST(testSave, insertRow){
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -92,13 +92,13 @@ TEST(testSave, insertRow){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 
 TEST(testSave, insertChild){
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName("E://qt_creator//3rd_task_testing//gtest//app//show.json");
     w.flagGetFile = 1;
@@ -148,7 +148,7 @@ TEST(testSave, insertChild){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 
 

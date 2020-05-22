@@ -31,9 +31,7 @@
     #include"initstart.h"
     #include<QLayout>
     #include <string>
-int argc;
-char* argv[1];
-    QApplication a(argc, argv);
+
 
 TEST(insertChild, firstGroupSelected){
     std::string inpDir = (const char*)INDIR;

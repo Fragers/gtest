@@ -38,9 +38,9 @@ TEST(deleteRow, deleteFirstGroup){
 
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -82,16 +82,16 @@ TEST(deleteRow, deleteFirstGroup){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 
 TEST(deleteRow, deleteFirstGroupSecondEmployee){
 
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -133,15 +133,15 @@ TEST(deleteRow, deleteFirstGroupSecondEmployee){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 TEST(deleteRow, deleteFirstGroup_FirstEmployee_FirstTask){
 
     std::string inpDir = (const char*)INDIR;
     QString se = QString::fromStdString(inpDir);
-    int argc;
-    char* argv[0];
-    QApplication a(argc, argv);
+//    int argc;
+//    char* argv[0];
+//    QApplication a(argc, argv);
     MainWindow w;
     w.file1.setFileName((inpDir+"show.json").c_str());
 
@@ -183,6 +183,6 @@ TEST(deleteRow, deleteFirstGroup_FirstEmployee_FirstTask){
 
     w.isSaved = true;
     w.close();
-    a.exit(0);
+//    a.exit(0);
 }
 #endif // TEST_DELETEROW_H
