@@ -5,7 +5,8 @@
 #include <QVector>
 #include <QVariant>
 
-class TreeItem {
+class TreeItem : QObject {
+    Q_OBJECT
 public:
      explicit TreeItem (const QVector<QVariant> &data,
      TreeItem *parentItem = 0); //Конструктор узла дерева
